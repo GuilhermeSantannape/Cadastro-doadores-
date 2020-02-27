@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Pagina Inicial</title>
@@ -24,13 +24,13 @@
     </header>
     <section class="formulario hide">
         <h2>Entre na lista de doadores</h2>
-        <form action="/">
+        <form action="/" method="POST">
             
             <input type="text" 
                    nome="nome" 
                    placeholder="Nome Comleto">
 
-            <input type="Email" 
+            <input type="email" 
                    email="Email" 
                    placeholder="Email">
 
@@ -44,44 +44,28 @@
         </form>
 
     </section>
-
-
+    
+    
     <main>
         <h2>Últimos <span>doadores</span> </h2>
 
         <section class="doadores">
+
             
+            {% for doador in doadores %}
 
             <div class="doador">
-                <div class="sangue">AB+</div>
-                <p>Guilherme Santanna</p>
+                <div class="sangue">
+                    {{doador.sangue}}
+                </div>
+                <p>
+                    {{doador.nome}}
+                </p>
             </div>
-            </div>
-
-            <div class="doador">
-                <div class="sangue">AB+</div>
-                <p>Guilherme Santanna</p>
-            </div>
-            </div>
-
-            <div class="doador">
-                <div class="sangue">AB+</div>
-                <p>Guilherme Santanna</p>
-            </div>
-            </div>
-
-            <div class="doador">
-                <div class="sangue">AB+</div>
-                <p>Guilherme Santanna</p>
-            </div>
-            </div>
-
-            <div class="doador">
-                <div class="sangue">AB+</div>
-                <p>Guilherme Santanna</p>
-            </div>
-            </div>
-
+            
+            {%endfor%}
+            
+          
         </section>
     </main>
 
@@ -92,7 +76,7 @@
 
 
 
-<script src="scripts.js"></script>
+<script src="/scripts.js"></script>
 </body>
 
 </html>
