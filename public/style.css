@@ -47,6 +47,8 @@ main h1,main h2{
 .doadores{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 64px;
+
 
 }
 .formulario{

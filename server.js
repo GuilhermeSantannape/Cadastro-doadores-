@@ -65,9 +65,9 @@ server.get("/",function(req, res){
 
 //uso do post
 server.post("/", function (req,res){
-    const nome=req.body.nome
-    const email=req.body.email
-    const sangue=req.body.sangue
+    const nome= req.body.nome
+    const email= req.body.email
+    const sangue= req.body.sangue
 
 
 //adc pra dentro do arrey
@@ -75,7 +75,10 @@ server.post("/", function (req,res){
         nome:nome,
         sangue,sangue
     })
-    return console.log(doadores)
+    console.log(doadores)
+    return  res.redirect("/")
+
+    
 
 })
 
